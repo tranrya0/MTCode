@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Your ASP.NET application</title>
+    <style>
+        body {
+            background: #fff;
+            color: #505050;
+            font: 14px 'Segoe UI', tahoma, arial, helvetica, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        #header {
+            background: #efefef;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: normal;
+            margin: 0;
+            padding: 0 30px;
+            line-height: 150px;
+        }
+
+        p {
+            font-size: 20px;
+            color: #fff;
+            background: #969696;
+            padding: 0 30px;
+            line-height: 30px;
+        }
+
+        #main {
+            padding: 5px 30px;
+        }
+
+        .section {
+            width: 33.0%;
+            float: left;
+            margin: 0 0 0 4%;
+        }
+
+            .section h2 {
+                font-size: 13px;
+                <!-- text-transform: uppercase; -->
+                margin: 0;
+                border-bottom: 1px solid silver;
+                padding-bottom: 12px;
+                margin-bottom: 8px;
+            }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            line-height: 20px;
+        }
+
+        li {
+            padding: 4px 0;
+        }
+
+        a {
+            color: #267cb2;
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <h1>TINFO 431 - ASP.NET MVC Coding Midterm Exam</h1>
+
+		<p>Modification steps required for completion of this Exam:
+		<br>Please note the *due* date and time, uploaded before 11:00pm.
+		<br>There is an approximate 1 hour grace period during which the exam is late and a 10% penalty will be applied.
+		<br>At 11:59pm Canvas will make the assignment unavailable and the exam can no longer be turned in.</p>
+    </div>
+
+    <div id="main">
+        <div>
+            <h2>This application consists of:</h2>
+            <ul>
+                <li><a href=http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application>
+                Begin by downloading the completed ASP.Net MVC website for Contoso University. Get the completed project.
+                You will not need the PDF or actual tutorial instructions.</a></li>
+                <li>Step by step instructions on how to correctly setup and configure the website
+                to get started are in Canvas->Pages if needed (you should already be familiar with this procedure from class)
+                <li>Replace the Visual Studio supplied Project_Readme.html with this one (this .html file).
+                	These will be your instructions for completing the 431 coding module of this exam.</li>
+                <li>You are supplied with pages showing basic nav between Home, About, and Contact.</li>
+                <li>After completing the changes, zip the entire website, including the database file in App_Data,
+                and upload the zip file to canvas.</li>
+                <li>Make sure you fully understand the requirements.
+                    Read this document over and ask questions.
+                    This is a live code exam but I will answer questions about the requirements at any time while it is open.
+                    I will make every effort to keep checking email and canvas messages until the assignment closes.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Modify the Contoso University website application in the following ways:</h2>
+            <ol>
+                <li>10 pts: <a href="http://go.microsoft.com/fwlink/?LinkID=320758">Change the site's theme using Bootstrap.</a> Your choice of themes, but it must be changed to one of the selections. You must further modify your theme in some arbitrary way that makes it unique in the class. If you arbitrarily modify 4 or 5 items in your theme, it becomes highly unlikely that your theme will line up exactly with another student website theme.</li>
+                <li>10 pts: <a href="http://go.microsoft.com/fwlink/?LinkID=320759">Use NuGet Package Manager to add ELMAH</a> (get the application-wide package) error logging to your application. You are not implementing logging. This assignment item is to get and install the package.</li>
+                <li>10 pts: <a href="http://www.asp.net/signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc">Add a real-time web component with ASP.NET SignalR.</a>
+                                This tutorial is a complete and separate client-server chat appication.
+                                The tutorial does not complete the step of linking the chat application back into your Contoso University
+                                application. This item requires that you integrate the live chat application into your Contoso University
+                                website in a way that is intuitive and user-friendly. An example of friendly integration would be having
+                                a link to launch the chat feature. I would not expect to have to type in a URL to reach this feature.</li>
+                <li>Object-Oriented Stuff - Using a code first approach, add the following properties and Model(s) to represent the described changes.
+                    For full credit on these, added data items should be propagated to corresponding Views.
+                    You can consider the user of this application to be authorized to view all data in the database.</li>
+                <ol>
+                    <li>10 pts: A Person "has a" Address object (use composition for this).
+                    An Address object has a single property of type string for Email (for simplicity that's all an Address has)</li>
+                    <li>10 pts: A Student "has a" CreditsEarned property</li>
+                    <li>10 pts: A Student "has a" Gpa property that can express overall grades with exactly 2 decimal points, such as 3.87, etc.</li>
+                    <li>10 pts: Use data attributes to insure that Email addresses entered into the system conform with the pattern [username]@contoso.edu. Hint: Refer to the regex material in the Galloway book.</li>
+                    <li>10 pts: Use data attributes to insure that Gpa is expressed as a value in range from 0.7 and 4.0 inclusive.</li>
+                </ol>
+                <li>10 pts: The Students (Index) view should be sortable ascending and descending according to the LastName column or the GPA column.</li>
+                <li>
+                    10 pts: The final 10 points is a catch all category that includes final prep of the application for testing.
+                    Remember to update the initialization of test data records in the Seed() method so that you are
+                    providing a complete and ready to go website for testing all the added features.
+                    Remember to include a nice friendly (and obvious) user interface for the chat client app.
+            </ol>
+            <h2>Deploy</h2>
+            <ul>
+                <li>Deployment will remain contained within Visual Studio using:</li>
+                <li>IIS Express</li>
+                <li>SQL Server LocalDB (current version is: MSSQLLocalDB) - DO NOT migrate this application away from using MSSQLLocalDB
+                	to use another version of SQL Server. Your website must work without modification of the config on my computer and I have Visual Studio 2015
+                	Enterprise with MSSQLLocalDB installed.</li>
+				<li>Make sure your database .mdf file remains local to the app and is located in the App_Data folder for grading</li>
+                <li>When unzipping and running this application initially (as downloaded from the web), you need to modify the Web.config file for the DB connection string to:
+                    "Data Source=(LocalDb)\MSSQLLocalDB;AttachDBFilename=|DataDirectory|\DBexample123.mdf;Initial Catalog=DBexample123;Integrated Security=SSPI;"</li>
+           </ul>
+        </div>
+    </div>
+</body>
+</html>

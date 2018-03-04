@@ -1,0 +1,64 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Custom CSS */
+a:hover {
+    color: #bc3918;
+}
+
+.btn-default {
+    color: #ffffff;
+    background-color: #bc6218;
+    border-color: #bc6218;
+}
+
+.btn-default:focus, .btn-default.focus {
+    color: #ffffff;
+    background-color: #bc3918;
+    border-color: #566566
+}
+
+.btn-default:hover {
+    color: #ffffff;
+    background-color: #bc3918;
+    border-color: #74898a
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    background-color: #18bc9c !important;
+    color: whitesmoke !important;
+}
+
+.pagination .active > a {
+    background-color: #bc3918 !important;
+    border-color: #566566 !important;
+}
+
+.jumbotron {
+    color: white;
+    background-color: #35a28c;
+    border-color: #35a28c;
+}
